@@ -1,0 +1,30 @@
+%YAML 1.2
+---
+name: Todoodle
+file_extensions: [todolist]
+scope: todoodle text
+prototype:
+  - include: main
+
+contexts:
+  main:
+    - match: '(\[!\] )[ ]*(.*)$'
+      scope: todoodle.item
+      captures:
+        1: todoodle.item-status todoodle.item-urgent markup.heading.markdown
+        2: todoodle.item-title todoodle.item-urgent invalid
+    - match: '(\[\.\] )[ ]*(.*)$'
+      scope: todoodle.item
+      captures:
+        1: todoodle.item-status todoodle.item-current markup.heading.markdown
+        2: todoodle.item-title todoodle.item-current keyword
+    - match: '(\[\✓\] )[ ]*(.*)$'
+      scope: todoodle.item
+      captures:
+        1: todoodle.item-status todoodle.item-done markup.heading.markdown
+        2: todoodle.item-title todoodle.item-done comment
+    - match: '(\[.\] )[ ]*(.*)$'
+      scope: todoodle.item
+      captures:
+        1: todoodle.item-status markup.heading.markdown
+        2: todoodle.item-title

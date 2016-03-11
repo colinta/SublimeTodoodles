@@ -1,0 +1,58 @@
+[
+  // { "keys": ["shift+up"], "command": "todoodle_select_item", "args": {"delta": -1}, "context": [
+  //     { "key": "selector", "operator": "equal", "operand": "todoodle" }
+  //   ] },
+  // { "keys": ["shift+down"], "command": "todoodle_select_item", "args": {"delta": 1}, "context": [
+  //     { "key": "selector", "operator": "equal", "operand": "todoodle" }
+  //   ] },
+  { "keys": [" "], "command": "todoodle_toggle_item", "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle.item-status" }
+    ] },
+  { "keys": ["shift+space", " "], "command": "todoodle_toggle_item", "args": {"status": "✓"}, "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" }
+    ] },
+  { "keys": ["shift+space", "shift+space"], "command": "todoodle_toggle_item", "args": {"status": "✓"}, "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" }
+    ] },
+  { "keys": ["!"], "command": "todoodle_toggle_item", "args": {"status": "!"}, "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle.item-status" }
+    ] },
+  { "keys": ["shift+space", "!"], "command": "todoodle_toggle_item", "args": {"status": "!"}, "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" }
+    ] },
+  { "keys": ["."], "command": "todoodle_toggle_item", "args": {"status": "."}, "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle.item-status" }
+    ] },
+  { "keys": ["shift+space", "."], "command": "todoodle_toggle_item", "args": {"status": "."}, "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" }
+    ] },
+  { "keys": ["?"], "command": "todoodle_toggle_item", "args": {"status": "?"}, "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle.item-status" }
+    ] },
+  { "keys": ["shift+space", "?"], "command": "todoodle_toggle_item", "args": {"status": "?"}, "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" }
+    ] },
+  { "keys": ["tab"], "command": "todoodle_indent_item", "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" }
+    ] },
+  { "keys": ["shift+tab"], "command": "todoodle_unindent_item", "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" }
+    ] },
+  { "keys": ["+"], "command": "todoodle_create_next_item", "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle.item-status" }
+    ] },
+  { "keys": ["+"], "command": "todoodle_create_item", "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" },
+      { "key": "selector", "operator": "not_equal", "operand": "todoodle.item-status" }
+    ] },
+  { "keys": ["="], "command": "todoodle_create_item", "args": {"key": "="}, "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" },
+      { "key": "selector", "operator": "not_equal", "operand": "todoodle.item-status" }
+    ] },
+  { "keys": ["shift+space", "delete"], "command": "todoodle_delete_item", "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" }
+    ] },
+  { "keys": ["shift+space", "backspace"], "command": "todoodle_delete_item", "context": [
+      { "key": "selector", "operator": "equal", "operand": "todoodle" }
+    ] }
+]
